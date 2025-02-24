@@ -1,0 +1,13 @@
+.location-wrapper {
+  position: relative;
+  width: 100%;
+  background: rgb(255, 255, 255);
+}
+
+#location {
+  position: relative;
+  margin: auto;
+  max-width: 1400px;
+  padding: 20px 0 50px;
+  height: 100vh;
+}

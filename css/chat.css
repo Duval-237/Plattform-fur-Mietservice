@@ -1,0 +1,480 @@
+.chat-wrapper {
+  position: relative;
+  width: 100%;
+  background: #fff;
+}
+
+#chat {
+  position: relative;
+  margin: auto;
+  max-width: 1400px;
+  padding: 20px 0 50px;
+  margin-top: 45px;
+  height: 90vh;
+  display: flex;
+}
+
+#chat #discusion {
+  position: relative;
+  max-width: 400px;
+  min-width: 400px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#chat #discusion .chat-search {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: 40px;
+  background: #eee;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  margin-bottom: 20px;
+  padding: 15px 20px;
+}
+
+#chat #discusion .chat-search svg {
+  max-width: 18px;
+  min-width: 18px;
+  stroke: #555;
+}
+
+#chat #discusion .chat-search input {
+  width: 100%;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+  color: #222;
+}
+
+#chat #discusion .profiles {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%; width: 100% ;
+  border-radius: 4px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* border: 1px solid #ddd; */
+  background: #fff;
+  user-select: none;
+  overflow: auto;
+  scrollbar-width: 0;
+}
+
+#chat #discusion .profiles::-webkit-scrollbar {
+  width: 0;
+}
+
+#chat #discusion .profiles .profiles-box {
+  position: relative;
+  width: 100%; height: 70px;
+  padding: 5px 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.1s;
+}
+#chat #discusion .profiles .profiles-box:hover {
+  background: #eee;
+}
+#chat #discusion .profiles .profiles-box.eneable {
+  background: #0080ff20;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-left {
+  position: relative;
+  height: 100%; min-width: 70px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-left .img {
+  position: relative;
+  width: 50px; height: 50px;
+  background: #ff00b3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-left .img span {
+  font-weight: 600;
+  color: #fff;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-left .img .online {
+  position: absolute;
+  top: 0; right: 0;
+  width: 15px; height: 15px;
+  border: 3px solid #fff;
+  background: #007fff;
+  border-radius: 50%;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-right {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+  margin-right: 10px;
+  /* border-bottom: 1px solid #ddd; */
+}
+#chat #discusion .profiles .profiles-box.eneable .bloc-right {
+  border-bottom: none;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-right .bloc-top,
+#chat #discusion .profiles .profiles-box .bloc-right .bloc-bottom {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-right .bloc-top span.name {
+  color: #222;
+  font-weight: 600;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-right .bloc-top span.date {
+  right: 0;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: #007fff;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-right .bloc-bottom span.message {
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 16px;
+  color: #444;
+  padding-right: 40px;
+  max-height: 32px;
+  overflow: hidden;
+}
+
+#chat #discusion .profiles .profiles-box .bloc-right .bloc-bottom .non-lue {
+  position: absolute;
+  bottom: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 17px; height: 17px;
+  font-size: 0.9em;
+  border-radius: 50%;
+  background: #007fff;
+  color: #fff;
+}
+
+#chat #conversation {
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  background: #eee;
+  border: 1px solid #ddd;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.086); */
+}
+
+#chat #conversation .box-chat {
+  position: relative;
+  width: 100%; height: 100%;
+  padding: 20px 20px 0px;
+  display: flex;
+  /* justify-content: end; */
+  flex-direction: column;
+  overflow: auto;
+}
+
+#chat #conversation .box-chat .date {
+  align-self: center;
+  padding: 10px 0;
+  color: #666;
+}
+
+#chat #conversation .msg1 {
+  position: relative;
+  max-width: 800px;
+  margin-bottom: 10px;
+  width: 85%;
+  display: flex;
+  justify-content: end;
+  align-self: flex-end;
+}
+
+#chat #conversation .msg1 .box-left {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+#chat #conversation .msg1 .box-left .data-profil {
+  display: flex;
+  align-items: end;
+  margin-bottom: 5px;
+}
+
+#chat #conversation .msg1 .box-left .data-profil .name-profil,
+#chat #conversation .msg2 .box-rigth .data-profil .name-profil {
+  color: #222;
+  font-weight: 600;
+}
+
+#chat #conversation .msg1 .box-left .data-profil .heure,
+#chat #conversation .msg2 .box-rigth .data-profil .heure {
+  color: #666;
+  font-size: 0.8em;
+  margin-right: 10px;
+}
+
+#chat #conversation .msg1 .box-left .message,
+#chat #conversation .msg2 .box-rigth .message {
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border-top-right-radius: 5px;
+  background: #007fff;
+  font-size: 0.95em;
+  color: #fff;
+}
+
+#chat #conversation .msg1 .profil {
+  min-width: 30px; height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background: #ff4d00;
+  color: #fff;
+  overflow: hidden;
+  font-size: 0.9em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chat #conversation .msg2 {
+  position: relative;
+  max-width: 800px;
+  margin-bottom: 10px;
+  width: 85%;
+  display: flex;
+  justify-content: start;
+}
+
+#chat #conversation .msg2 .profil {
+  min-width: 30px; height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #ff00b3;
+  color: #fff;
+  overflow: hidden;
+  font-size: 0.9em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chat #conversation .msg2 .box-rigth {
+  display: flex;
+  flex-direction: column;
+}
+
+#chat #conversation .msg2 .box-rigth .data-profil {
+  display: flex;
+  align-items: end;
+  margin-bottom: 5px;
+}
+
+#chat #conversation .msg2 .box-rigth .data-profil .heure {
+  margin-left: 10px;
+}
+
+#chat #conversation .msg2 .box-rigth .message {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 5px;
+  background: #fff;
+  color: #222;
+}
+
+
+#chat #conversation .write-message {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  display: none;
+  align-items: end;
+  overflow: auto;
+}
+
+#chat #conversation .write-message .inputbox {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 0px 20px;
+  margin-right: 10px;
+  border-radius: 25px;
+  background: #fff;
+  overflow: hidden;
+}
+
+#chat #conversation .write-message .inputbox textarea {
+  font-weight: 400;
+  width: 100%; height: 50px;
+  max-height: 200px;
+  border: none;
+  padding: 14px 0px;
+  color: #444;
+  resize: none;
+  background: transparent;
+  scrollbar-width: 0  ;
+}
+
+#chat #conversation .write-message .inputbox textarea::-webkit-scrollbar {
+  width: 0;
+}
+
+#chat #conversation .write-message .plane {
+  position: relative;
+  min-width: 50px; height: 50px;
+  border-radius: 50%;
+  border: none;
+  resize: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#chat #conversation .write-message .plane input {
+  width: 100%; height: 100%;
+  background: #007fff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+#chat #conversation .write-message .plane svg {
+  position: absolute;
+  width: 20px;
+  fill: #fff;
+  pointer-events: none;
+}
+
+
+
+@media all and (max-width: 1000px) {
+  #chat #discusion {
+    max-width: 320px;
+    min-width: 320px;
+  }
+  #chat #conversation .msg1 {
+    position: relative;
+    max-width: 800px;
+    margin-bottom: 10px;
+    width: 85%;
+  }
+  #chat #conversation .msg1 .box-left .message,
+  #chat #conversation .msg2 .box-rigth .message {
+    font-size: 0.90em;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .header-wrapper {
+    background: #fff;
+    transition: none;
+  }
+  .header-wrapper.eneable {
+    background: #fff;
+    transition: none;
+  }
+  .chat-wrapper #chat {
+    padding: 20px 10px 30px;
+    height: 100vh;
+  }
+  #chat #discusion {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  #chat #discusion .profiles .profiles-box.eneable {
+    background: none;
+  }
+  #chat #conversation {
+    display: none;
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 100%; height: 100%;
+    margin-left: 0px;
+  }
+  #chat #conversation .box-chat {
+    position: fixed;
+    bottom: 80px;
+    padding: 0px 10px 0px;
+  }
+  #chat #conversation .write-message {
+    position: fixed;
+    bottom: 0;
+  }
+  #chat #conversation .msg1 .box-left .data-profil .heure,
+  #chat #conversation .msg2 .box-rigth .data-profil .heure {
+    font-size: 0.7em;
+  }
+  #chat #conversation .msg1 .box-left .data-profil .name-profil,
+  #chat #conversation .msg2 .box-rigth .data-profil .name-profil {
+    font-size: 0.9em;
+  }
+  #chat #conversation .msg1 .box-left .message,
+  #chat #conversation .msg2 .box-rigth .message {
+    padding: 7px 10px;
+  }
+  #chat #conversation .msg1 .profil {
+    display: none;
+  }
+  .footer-wrapper #footer {
+    display: none;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .header-wrapper #header .header-search {
+    display: flex;
+  }
+  .header-wrapper #header .header-menu {
+    margin-left: 8px;
+  }
+  .chat-wrapper #chat {
+    padding: 10px 10px 0px;
+    margin-top: 0px;
+    border-top: 1px solid #eee;
+  }
+  #chat #discusion .chat-search {
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    width: 95%;
+  }
+ 
+}
+
+@media all and (max-width: 450px) {
+  .header-wrapper #header .header-search {
+    display: none;
+  }
+  #chat #discusion .profiles .profiles-box .bloc-left {
+    min-width: 60px;
+  }
+  #chat #discusion .profiles .profiles-box .bloc-right {
+    margin-left: 5px;
+  }
+
+}
